@@ -57,4 +57,7 @@
       <Name>IHMSSI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Doc_A_Consulter\Chenillard.jpg" />
+  </ItemGroup>
 </Project>
