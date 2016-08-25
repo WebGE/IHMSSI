@@ -1,5 +1,5 @@
 # IHMSSI
-Tags: LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, C#, Visual Studio.
+Tags: LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, C#, NETMF, Visual Studio.
 
 Target: Netduino, Netduino plus 2, Netduino 3.
 
