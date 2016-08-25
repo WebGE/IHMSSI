@@ -10,4 +10,4 @@ This library can be use to control a specific HMI with Netduino :
  
 Code written in C# with Visual Studio . 
 
-Example test program.
+NetduinoIHMSSI : Example test program.
