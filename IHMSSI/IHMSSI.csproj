@@ -35,11 +35,12 @@
   <ItemGroup>
     <Reference Include="I2CLCD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\GitHub\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\I2CLCD.dll</HintPath>
+      <HintPath>..\..\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\I2CLCD.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SPOT.Native" />
-    <Reference Include="PCF8574">
-      <HintPath>..\..\..\..\GitHub\PCF8574\NetduinoPCF8574\PCF8574\bin\Debug\PCF8574.dll</HintPath>
+    <Reference Include="PCF8574, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PCF8574\NetduinoPCF8574\PCF8574\bin\Debug\PCF8574.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
