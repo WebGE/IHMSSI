@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="ToolBoxes.IHMSSI">
+    <Position X="1.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Field Name="bpEchap" Hidden="true" />
+      <Field Name="bpEnter" Hidden="true" />
+      <Field Name="bpFleBas" Hidden="true" />
+      <Field Name="bpFleHaut" Hidden="true" />
+      <Field Name="bpMoins" Hidden="true" />
+      <Field Name="bpOk" Hidden="true" />
+      <Field Name="bpPlus" Hidden="true" />
+      <Field Name="BPs" Hidden="true" />
+      <Field Name="bpSet" Hidden="true" />
+      <Field Name="d0" Hidden="true" />
+      <Field Name="d1" Hidden="true" />
+      <Field Name="d2" Hidden="true" />
+      <Field Name="d3" Hidden="true" />
+      <Field Name="d4" Hidden="true" />
+      <Field Name="d5" Hidden="true" />
+      <Field Name="d6" Hidden="true" />
+      <Field Name="d7" Hidden="true" />
+      <Field Name="lcd" Hidden="true" />
+      <Field Name="leds" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Class Name="ToolBoxes.IHMSSI.Led">
+        <Members>
+          <Field Name="etat" Hidden="true" />
+          <Field Name="leds" Hidden="true" />
+          <Field Name="position" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>IHMSSI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="ToolBoxes.IHMSSI.BP">
+        <Members>
+          <Field Name="bps" Hidden="true" />
+          <Field Name="position" Hidden="true" />
+        </Members>
+        <TypeIdentifier>
+          <NewMemberFileName>IHMSSI.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>B4QAAggAAAiIAIAKAAAAAiAUAwBgHCIIgQggCqGEAAI=</HashCode>
+      <FileName>IHMSSI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
