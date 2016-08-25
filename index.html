@@ -83,13 +83,33 @@
 </ul>
 <hr/>
 <p><strong>Utilisation</strong></p>
-<hr>
+<hr/>
 <ol>
 	<li><strong>Ajouter</strong> la référence<strong> IHMSSI</strong> et l'espace de nom <strong>ToolBoxes </strong>dans le projet.</li>
 	<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>IHMSSI</em>.</li>
 	<li><strong>Utiliser</strong> les propriétés associées aux LED et aux BP de l'intreface pour accéder individuellement aux méthodes de ces objets. <strong>Utiliser</strong> les méthodes de la classe IHMSSI pour les gérer collectivement.</li>
 </ol>
-<hr>
+<hr/>
+<p><strong>Constructeurs</strong></p>
+<table>
+<tr>
+	<td></td>
+	<td><strong>Syntaxe</strong></td>
+	<td><strong>Description</strong></td>
+</tr>
+<tr>
+	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><strong>IHMSSI()</strong>()</td>
+	<td>Instancie un objet "IHMSSI" composé : </td>
+	<ul>
+		<li>des huit leds reliées au port d'un PCF8574A (@ = 0x38), identifiées D0 à D7 sur la carte </li>
+		<li>des huit boutons-poussoir reliés au port d'un PCF8574A (@ = 0x3f), identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte</li>
+		<li>d'un lcd Midas</li>
+	</ul>  
+	<td>Fréquence du bus: 100kHz</td>
+	<td>Initialisation de l'écran et extinction des leds</td>
+</tr>
+</table>
       </section>
     </div>
 
