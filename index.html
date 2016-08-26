@@ -76,7 +76,7 @@
 <h3>Classe IHMSSI</h3>
 <p>     Contrôle les leds, les boutons-poussoir et l'afficheur de la carte SSI via un bus I²C.</p>
 <p>     <strong>Espace de noms:</strong> Toolboxes</p>
-<p>     <strong>Assembly:</strong> IHMSSI, I2CLCD</p>
+<p>     <strong>Assembly:</strong> IHMSSI, I2CLCD, PCF8574</p>
 <hr/>
 <p><strong>Contenu du dossier à télécharger</strong></p>
 <hr/>
@@ -108,9 +108,25 @@
 		<ul>
 			<li>des huit leds reliées au port d'un PCF8574A (@ = 0x38), identifiées D0 à D7 sur la carte,</li>
 			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (@ = 0x3f), identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte,</li>
-			<li>d'un lcd Midas (@=03A)x</li>
+			<li>d'un lcd Midas (@=03A)</li>
 		</ul>  
 		<p>Fréquence du bus: 100kHz</p>
+		<p>Remarque: Initialisation du lcd et extinction des leds</p>
+	</td>
+</tr>
+<tr>
+	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>PCF8574</strong> <em>BPs</em>, <strong>I2CLcd</strong> <em>lcd</em>)</td>
+	<td>Instancie un objet "IHMSSI" composé : 
+		<ul>
+			<li>des huit leds reliées au port d'un PCF8574A, identifiées D0 à D7 sur la carte,</li>
+			<li>des huit boutons-poussoir reliés au port d'un PCF8574A, identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte,</li>
+			<li>d'un lcd Midas</li>
+		</ul> 
+		<p>Paramètres:</p>
+		<p><em>leds</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
+		<p><em>BPs</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
+		<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLCD</a></p>
 		<p>Remarque: Initialisation du lcd et extinction des leds</p>
 	</td>
 </tr>
