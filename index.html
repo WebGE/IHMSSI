@@ -107,8 +107,8 @@
 	<td><strong>IHMSSI</strong>()</td>
 	<td>Instancie un objet "IHMSSI" composé : 
 		<ul>
-			<li>des huit leds reliées au port d'un PCF8574A (@ = 0x38), identifiées D0 à D7 sur la carte,</li>
-			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (@ = 0x3f), identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte,</li>
+			<li>des huit leds reliées au port d'un PCF8574A (@ = 0x38) (identifiées D0 à D7 sur la carte),</li>
+			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (@ = 0x3f) (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte),</li>
 			<li>d'un lcd Midas (@=03A)</li>
 		</ul>  
 		<p>Fréquence du bus: 100kHz</p>
@@ -120,8 +120,8 @@
 	<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>PCF8574</strong> <em>BPs</em>, <strong>I2CLcd</strong> <em>lcd</em>)</td>
 	<td>Instancie un objet "IHMSSI" composé : 
 		<ul>
-			<li>des huit leds reliées au port d'un PCF8574A, identifiées D0 à D7 sur la carte,</li>
-			<li>des huit boutons-poussoir reliés au port d'un PCF8574A, identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte,</li>
+			<li>des huit leds reliées au port d'un PCF8574A (identifiées D0 à D7 sur la carte),</li>
+			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte),</li>
 			<li>d'un lcd Midas</li>
 		</ul> 
 		<p>Paramètres:</p>
@@ -146,7 +146,7 @@
 	<td>
 		Le bouton-poussoir <strong>Echap</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.
 		<p>Exemple:</p>
-		<p><em>if (Ihm.BpPlus.Read() == true)<br>
+		<p><em>if (Ihm.BpEchap.Read() == true)<br>
 	                    ...<br>
 	                else<br>
 	                   ...
@@ -239,8 +239,12 @@
 <tr>
 	<td><img src="https://www.jetbrains.com/help/resharper/5.0/images/general_property_VS.png"></td>
 	<td><strong>Lcd</strong></td>
-	<td>L'afficheur <strong>Lcd</strong> accède aux méthodes de la classe
-	<a href="https://webge.github.io/LCDI2C/" target="_blank">LCDI2C</a>.</td>
+	<td>
+		L'afficheur <strong>Lcd</strong> accède aux méthodes de la classe
+	<a href="https://webge.github.io/LCDI2C/" target="_blank">LCDI2C</a>.
+	<p>Exemple:</p>
+	<p><em>Ihm.Lcd.PutString(0, 0, "Classe IHMSSI");</em></p>
+	</td>
 </tr>
 </table>
 
@@ -288,7 +292,7 @@
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
 	<td><strong>bool Read</strong>()</td>
-	<td>Renvoie l'état logique du bouton-poussoir. <br><strong>Vrai</strong> si actionné. <strong>faux</strong> si relâché</td>
+	<td>Renvoie l'état logique du bouton-poussoir. <br><strong>Vrai</strong> si actionné. <strong>Faux</strong> si relâché</td>
 </tr>
 </table>
 
@@ -306,7 +310,7 @@
 <tr>
 	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_method_VS.png"></td>
 	<td><strong>void Write</strong>(<strong>bool</strong> <em>state</em>)</td>
-	<td>Eclaire ou éteint la led .<br> <strong>Vrai</strong> => led éclairée. <strong>faux</strong> => led éteinte</td>
+	<td>Eclaire ou éteint la led .<br> <strong>Vrai</strong> => led éclairée. <strong>Faux</strong> => led éteinte</td>
 </tr>
 </table>
       </section>
