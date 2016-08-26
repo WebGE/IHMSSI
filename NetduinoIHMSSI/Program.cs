@@ -19,17 +19,17 @@ namespace NetduinoIHMSSI
             Ihm.Lcd.PutString(0, 1, "Test des Leds");
 
             // Leds test
-            Ihm.LedsWrite(0x00);
+            Ihm.LedsWrite(0xff); // Toutes les Leds éclairée
             Thread.Sleep(1000);
             Ihm.LedsOff();
-            Ihm.LedsWrite(0xAA);
+            Ihm.LedsWrite(0x0f); // 4 leds de droite éclairée
             Thread.Sleep(1000);
             Ihm.LedsOff();
             Thread.Sleep(1000);
-            Ihm.D2.Write(true);
-            Ihm.D3.Write(true);
             Ihm.D4.Write(true);
             Ihm.D5.Write(true);
+            Ihm.D6.Write(true);
+            Ihm.D7.Write(true);
             Thread.Sleep(1000);
             Ihm.LedsOff();
             Thread.Sleep(1000);

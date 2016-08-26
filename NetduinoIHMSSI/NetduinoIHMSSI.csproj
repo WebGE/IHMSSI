@@ -37,25 +37,23 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="I2CLCD">
-      <HintPath>..\..\LCDI2C\NetduinoI2CLCD\I2CLCD\bin\Debug\I2CLCD.dll</HintPath>
+      <HintPath>..\IHMSSI\bin\Debug\I2CLCD.dll</HintPath>
+    </Reference>
+    <Reference Include="IHMSSI">
+      <HintPath>..\IHMSSI\bin\Debug\IHMSSI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Hardware.PWM" />
     <Reference Include="Microsoft.SPOT.Hardware.SerialPort" />
     <Reference Include="Microsoft.SPOT.Native" />
     <Reference Include="Microsoft.SPOT.Net" />
-    <Reference Include="PCF8574">
-      <HintPath>..\..\PCF8574\NetduinoPCF8574\PCF8574\bin\Debug\PCF8574.dll</HintPath>
+    <Reference Include="PCF8574, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IHMSSI\bin\Debug\PCF8574.dll</HintPath>
     </Reference>
     <Reference Include="SecretLabs.NETMF.Hardware" />
     <Reference Include="SecretLabs.NETMF.Hardware.Netduino" />
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IHMSSI\IHMSSI.csproj">
-      <Project>{562D613D-A0C3-458E-A7E0-F8D90505C85B}</Project>
-      <Name>IHMSSI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Doc_A_Consulter\Chenillard.jpg" />

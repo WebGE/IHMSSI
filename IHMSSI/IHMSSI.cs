@@ -209,7 +209,7 @@ namespace ToolBoxes
 
         // Constructors
         /// <summary>
-        /// I2C Bus configuration : LCD = MIDAS(0x3A); PCF8574 (addBPs_I2C = 0x27, addLeds_I2C=0x20); Frequence_Bus=100kHz;
+        /// I2C Bus configuration : LCD = MIDAS(0x3A); PCF8574 (addBPs_I2C = 0x3f, addLeds_I2C=0x38); Frequence_Bus=100kHz;
         /// Leds => Off; Lcd => Init
         /// </summary>
         public IHMSSI()
@@ -237,6 +237,37 @@ namespace ToolBoxes
             lcd.Init(); 
             lcd.ClearScreen();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="leds"></param>
+        /// <param name="BPs"></param>
+        /// <param name="lcd"></param>
+        public IHMSSI(PCF8574 leds, PCF8574 BPs, I2CLcd lcd)
+        {
+            this.leds = leds;
+            this.BPs = BPs;
+            this.lcd = lcd;
+            d0 = new Led(false, 0, leds);
+            d1 = new Led(false, 1, leds);
+            d2 = new Led(false, 2, leds);
+            d3 = new Led(false, 3, leds);
+            d4 = new Led(false, 4, leds);
+            d5 = new Led(false, 5, leds);
+            d6 = new Led(false, 6, leds);
+            d7 = new Led(false, 7, leds);
+            bpPlus = new BP(BPs, 1);
+            bpFleHaut = new BP(BPs, 2);
+            bpFleBas = new BP(BPs, 4);
+            bpMoins = new BP(BPs, 8);
+            bpSet = new BP(BPs, 16);
+            bpOk = new BP(BPs, 32);
+            bpEnter = new BP(BPs, 64);
+            bpEchap = new BP(BPs, 128);
+            leds.Write(0xff); // Leds Off
+            lcd.Init();
+            lcd.ClearScreen();
+        }
 
         // Methods
         #region
@@ -260,7 +291,7 @@ namespace ToolBoxes
         /// <param name="value">value to write</param>
         public void LedsWrite(byte value)
         {
-            leds.Write(value);
+            leds.Write((byte)~value);
         }
         
         /// <summary>
