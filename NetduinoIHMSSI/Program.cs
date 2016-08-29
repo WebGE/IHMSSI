@@ -13,6 +13,7 @@ namespace NetduinoIHMSSI
     {
         public static void Main()
         {
+            // Construction d'un objet IHM
             IHMSSI Ihm = new IHMSSI();
 
             Ihm.Lcd.PutString(0, 0, "Classe IHMSSI");
@@ -33,7 +34,6 @@ namespace NetduinoIHMSSI
             Thread.Sleep(1000);
             Ihm.LedsOff();
             Thread.Sleep(1000);
-
             // BPs test
             Ihm.Lcd.ClearScreen();
             Ihm.Lcd.PutString(0, 0, "Classe IHMSSI");
