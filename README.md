@@ -8,6 +8,6 @@ This library can be use to control a specific HMI with Netduino :
 - 8 leds connected to a PCF8574(A),
 - 8 buttons connected to a PCF8574(A)
  
-Code written in C# with Visual Studio . 
+Code written in C# with Visual Studio 2013. 
 
 NetduinoIHMSSI : Example test program.
