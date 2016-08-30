@@ -110,12 +110,12 @@
 	<td><strong>IHMSSI</strong>()</td>
 	<td>Instancie un objet "IHMSSI" composé : 
 		<ul>
-			<li>des huit leds reliées au port d'un PCF8574A (@ = 0x38) (identifiées D0 à D7 sur la carte),</li>
-			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (@ = 0x3f) (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte),</li>
-			<li>d'un lcd Midas (@=03A)</li>
+			<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
+			<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f) ,</li>
+			<li>d'un afficheur lcd Midas (@=03A)</li>
 		</ul>  
-		<p>Fréquence du bus: 100kHz</p>
-		<p>Remarque: Initialisation du lcd et extinction des leds</p>
+		<p>Fréquence du bus: 100kHz pour les trois circuits</p>
+		<p>Remarque: Initialisation du lcd et extinction des leds dans le constructeur</p>
 	</td>
 </tr>
 <tr>
@@ -123,9 +123,9 @@
 	<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>PCF8574</strong> <em>BPs</em>, <strong>I2CLcd</strong> <em>lcd</em>)</td>
 	<td>Instancie un objet "IHMSSI" composé : 
 		<ul>
-			<li>des huit leds reliées au port d'un PCF8574A (identifiées D0 à D7 sur la carte),</li>
-			<li>des huit boutons-poussoir reliés au port d'un PCF8574A (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte),</li>
-			<li>d'un lcd Midas</li>
+			<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574 (@ dans [0x20, 0x27]) ,</li>
+			<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574 (@ dans [0x20, 0x27]) ,</li>
+			<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
 		</ul> 
 		<p>Paramètres:</p>
 		<p><em>leds</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
