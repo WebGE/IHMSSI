@@ -123,11 +123,26 @@
 	<td><strong>IHMSSI</strong>(<strong>I2CLcd</strong> <em>lcd</em>)</td>
 	<td>Instancie un objet "IHMSSI" composé : 
 		<ul>
-		<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
+			<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
 			<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f) ,</li>
 			<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
 		</ul> 
 		<p>Paramètres:</p>
+		<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLcd</a></p>
+		<p>Remarque: Initialisation du lcd et extinction des leds</p>
+	</td>
+</tr>
+<tr>
+	<td><img src="http://www.jetbrains.com/resharper/webhelp50/images/general_constructor_VS.png"></td>
+	<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>I2CLcd</strong> <em>lcd</em>)</td>
+	<td>Instancie un objet "IHMSSI" composé : 
+		<ul>
+			<li>de huit leds (identifiées D0 à D7 sur la carte) pouvant être reliées à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574 (@ dans [0x20, 0x27]) ,</li>
+			<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f) ,</li>
+			<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
+		</ul> 
+		<p>Paramètres:</p>
+		<p><em>leds</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
 		<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLcd</a></p>
 		<p>Remarque: Initialisation du lcd et extinction des leds</p>
 	</td>
