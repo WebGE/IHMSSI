@@ -5,8 +5,8 @@ Target: Netduino, Netduino plus 2, Netduino 3.
 
 This library can be use to control a specific HMI with Netduino :
 - 1 LCD 2X16 I2C (PCF2119),
-- 8 leds connected to a PCF8574,
-- 8 buttons connected to a PCF8574
+- 8 leds connected to a PCF8574(A),
+- 8 buttons connected to a PCF8574(A)
  
 Code written in C# with Visual Studio . 
 
