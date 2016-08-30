@@ -1,15 +1,16 @@
 /*
  * Create on 25/8/2016 to Netduino
- * Update :
+ * Update : 30:08:2016
  * Author : Philippe Mariano
  */
 using System;
 using Microsoft.SPOT;
 
 namespace ToolBoxes
-{ 
+{  // Documentation de la classe IHMSSI sur Github https://webge.github.io/IHMSSI/
     public class IHMSSI
     {
+// ------------------------------------------------------------------------------
         public class Led
         {
             private bool state;
@@ -50,7 +51,7 @@ namespace ToolBoxes
             }
 
         }
-
+// ------------------------------------------------------------------------------
         public class BP
         {
             private byte position;
@@ -71,8 +72,8 @@ namespace ToolBoxes
                     return false;
             }
         }
-
-        // IHMSSI Components
+// ------------------------------------------------------------------------------
+        // IHMSSI
         #region Components
         // BP
         private PCF8574 BPs;
@@ -208,41 +209,32 @@ namespace ToolBoxes
         #endregion
 
         // Constructors
+        #region Constructors
         /// <summary>
-        /// I2C Bus configuration : LCD = MIDAS(0x3A); PCF8574 (addBPs_I2C = 0x3f, addLeds_I2C=0x38); Frequence_Bus=100kHz;
+        /// Constructor : LCD = MIDAS(0x3A); PCF8574 (addBPs_I2C = 0x3f, addLeds_I2C=0x38); Frequence_Bus=100kHz;
         /// Leds => Off; Lcd => Init
         /// </summary>
-        public IHMSSI()
-        {
-            leds = new PCF8574(0x38, 100);
-            BPs = new PCF8574(0x3f, 100);
-            lcd = new I2CLcd(I2CLcd.LcdManufacturer.MIDAS, 100);
-            d0 = new Led(false, 0, leds);
-            d1 = new Led(false, 1, leds);
-            d2 = new Led(false, 2, leds);
-            d3 = new Led(false, 3, leds);
-            d4 = new Led(false, 4, leds);
-            d5 = new Led(false, 5, leds);
-            d6 = new Led(false, 6, leds);
-            d7 = new Led(false, 7, leds);
-            bpPlus = new BP(BPs, 1);
-            bpFleHaut = new BP(BPs, 2);
-            bpFleBas = new BP(BPs, 4);
-            bpMoins = new BP(BPs, 8);
-            bpSet = new BP(BPs, 16);
-            bpOk = new BP(BPs, 32);
-            bpEnter = new BP(BPs, 64);
-            bpEchap = new BP(BPs, 128);
-            leds.Write(0xff); // Leds Off
-            lcd.Init(); 
-            lcd.ClearScreen();
-        }
+        public IHMSSI() : this(new PCF8574(0x38, 100), new PCF8574(0x3f, 100), new I2CLcd(I2CLcd.LcdManufacturer.MIDAS, 100)) { }
+
         /// <summary>
-        /// 
+        /// Constructor : PCF8574 (addBPs_I2C = 0x3f, addLeds_I2C=0x38); Frequence_Bus=100kHz;
         /// </summary>
-        /// <param name="leds"></param>
-        /// <param name="BPs"></param>
-        /// <param name="lcd"></param>
+        /// <param name="lcd">MIDAS(0x3A) or BATRON(0x3B), F[100kHz,400kHz]</param>
+        public IHMSSI(I2CLcd lcd) : this(new PCF8574(0x38, 100), new PCF8574(0x3f, 100),lcd){}
+
+        /// <summary>
+        /// Constructor : LCD = MIDAS(0x3A); PCF8574 (addBPs_I2C = 0x3f, addLeds_I2C=0x38); Frequence_Bus=100kHz;
+        /// </summary>
+        /// <param name="leds">addLeds_I2C=> PCF8574[0x20, 0x27], PCF8574A[0x38, 0x3F], F[100kHz,400kHz]</param>
+        /// <param name="lcd">MIDAS(0x3A) or BATRON(0x3B)</param>
+        public IHMSSI(PCF8574 leds, I2CLcd lcd ) : this(leds, new PCF8574(0x3f, 100), lcd) { }      
+        
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="leds">addLeds_I2C=> PCF8574[0x20, 0x27], PCF8574A[0x38, 0x3F], F[100kHz,400kHz]</param>
+        /// <param name="BPs">addLeds_I2C=> PCF8574[0x20, 0x27], PCF8574A[0x38, 0x3F], F[100kHz,400kHz]</param>
+        /// <param name="lcd">MIDAS(0x3A) or BATRON(0x3B), F[100kHz,400kHz]</param>
         public IHMSSI(PCF8574 leds, PCF8574 BPs, I2CLcd lcd)
         {
             this.leds = leds;
@@ -268,6 +260,7 @@ namespace ToolBoxes
             lcd.Init();
             lcd.ClearScreen();
         }
+        #endregion
 
         // Methods
         #region
@@ -318,5 +311,6 @@ namespace ToolBoxes
             BPPlus = ((EtatBp & 1) == 1);  
         }
         #endregion
+// ------------------------------------------------------------------------------
     }
 }
