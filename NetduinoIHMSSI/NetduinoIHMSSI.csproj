@@ -39,17 +39,11 @@
     <Compile Include="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="I2CLCD">
-      <HintPath>..\IHMSSI\bin\Debug\I2CLCD.dll</HintPath>
-    </Reference>
-    <Reference Include="IHMSSI">
-      <HintPath>..\IHMSSI\bin\Debug\IHMSSI.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.SPOT.Hardware" />
     <Reference Include="Microsoft.SPOT.Native" />
-    <Reference Include="PCF8574, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\IHMSSI\bin\Debug\PCF8574.dll</HintPath>
+    <Reference Include="microtoolskit, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Documents\Visual Studio V2013\microtoolskit\packages\WEBGE.Microtoolskit.1.2.0\lib\netmf43\microtoolskit.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="SecretLabs.NETMF.Hardware" />
     <Reference Include="SecretLabs.NETMF.Hardware.NetduinoPlus, Version=4.3.1.0, Culture=neutral, processorArchitecture=MSIL" />
@@ -57,5 +51,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Doc_A_Consulter\Chenillard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
