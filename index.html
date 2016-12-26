@@ -62,7 +62,7 @@
 	</tr>
 	<tr>
 		<td align="center"><strong>Netduino + 2</strong></td>
-		<td  align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
+		<td align="center"><strong>Netduino 3 wifi* (compatible Gadgeteer)</strong></td>
 	</tr>
 </table>
 
@@ -83,20 +83,21 @@
 	<li>Du projet <strong>IHMSSI </strong> : le code de la classe <em>IHMSSI</em>.</li>
 	<li>Du projet <strong>NetduinoIHMSSI </strong>: un exemple d'utilisation de cette classe.</li>
 </ul>
-	      <em>Remarque : La classe IHMSSI est situé dans la bibliothèque <strong>MicroToolsKit disponible sur <a href="https://www.nuget.org/">nuget.org</a></strong></em>	
+	      <em>Remarque : La classe <strong>IHMSSI</strong> se situe dans la bibliothèque <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/">nuget.org</a></em>	
 <hr>
-<h3>Utilisation de la classe IHMSSI</h3>
+<h3>Description et utilisation de la classe IHMSSI</h3>
 <ul>
-	<li><strong>Rôle: </strong>Contrôle les leds, les boutons-poussoir et l'afficheur de la carte SSI via un bus I²C.</li>
-	<li><strong>Espace de noms: </strong>ToolBoxes</li>
-	<li><strong>Assembly(s): </strong> IHMSSI, I2CLCD, PCF8574</li>
+	<li><strong>Rôle: </strong>Contrôle les leds, les boutons-poussoir et l'afficheur de la carte SSI via un bus I²C.</li>	
+	<li><strong>Assembly: </strong> MicroToolsKit</li>
+	<li><strong>Espace de noms: </strong>Microtoolskit.Hardware.IHM</li>
 </ul>
 
 
 <hr/>
 <p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
 <ol>
-	<li><strong>Ajouter</strong> l'(es) assembly(s) dans le répertoire <em>référence</em> du projet et l'espace de noms <strong>ToolBoxes</strong> dans l'en-tête du fichier source.</li>
+	<li><strong>Ajouter</strong> l'assembly <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/">nuget.org</a> dans le répertoire <em>référence</em> du projet avec le gestionnaire de paquets NuGet.</li>
+	<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.IHM</strong> dans l'en-tête du fichier source.</li>
 	<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>IHMSSI</em>.</li>
 	<li><strong>Utiliser</strong> les propriétés associées aux LED et aux BP de l'IHM pour accéder individuellement aux méthodes des objets. <strong>Utiliser</strong> les méthodes de la classe IHMSSI pour les gérer collectivement.</li>
 </ol>
