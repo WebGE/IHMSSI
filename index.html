@@ -17,7 +17,7 @@
 			<a id="forkme_banner" href="https://github.com/WebGE/IHMSSI">View on GitHub</a>
 
 			<h1 id="project_title">Interface Homme Machine à bus I²C</h1>
-			<h2 id="project_tagline">Description des classes <strong><em>IHMSSI</em></strong>, <strong><em>LED</em></strong> et <strong><em>BP</em></strong>				développées en C# pour une carte Netduino plus 2 ou une Netduino 3.</h2>
+			<h2 id="project_tagline">Description des classes <strong><em>IHMSSI</em></strong>, <strong><em>LED</em></strong> et <strong><em>BP</em></strong>				développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...)</h2>
 
 			<section id="downloads">
 				<a class="zip_download_link" href="https://github.com/WebGE/IHMSSI/zipball/master">Download this project as a .zip file</a>
@@ -94,13 +94,16 @@
 			<h3>Description et utilisation de la classe IHMSSI</h3>
 			<ul>
 				<li><strong>Rôle: </strong>Contrôle les leds, les boutons-poussoir et l'afficheur de la carte SSI via un bus I²C.</li>
-				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)</li>
+				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur
+					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/"
+						target="_blank">nuget.org</a>)</li>
 				<li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.IHM</em></li>
 			</ul>
 			<hr/>
 			<p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
 			<ol>
-				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le répertoire <em>Références</em>					du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
+					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
 				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.IHM</strong> dans l'en-tête du fichier source.</li>
 				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>IHMSSI</em>.</li>
 				<li><strong>Utiliser</strong> les propriétés associées aux LED et aux BP de l'IHM pour accéder individuellement aux méthodes
@@ -121,7 +124,8 @@
 						<ul>
 							<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
 							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
-								,</li>
+								,
+							</li>
 							<li>d'un afficheur lcd Midas (@=03A).</li>
 						</ul>
 						<p>Fréquence du bus: 100kHz pour les trois circuits.</p>
@@ -135,7 +139,8 @@
 						<ul>
 							<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
 							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
-								,</li>
+								,
+							</li>
 							<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
 						</ul>
 						<p>Paramètre:</p>
@@ -151,7 +156,8 @@
 							<li>de huit leds (identifiées D0 à D7 sur la carte) pouvant être reliées à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574
 								(@ dans [0x20, 0x27]) ,</li>
 							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
-								,</li>
+								,
+							</li>
 							<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
 						</ul>
 						<p>Paramètres:</p>
@@ -367,7 +373,7 @@
 	<!-- FOOTER  -->
 	<div id="footer_wrap" class="outer">
 		<footer class="inner">
-			<p class="copyright">Interface Homme Machine maintained by <a href="https://github.com/WebGE">WebGE</a></p>
+			<p class="copyright">Description des classes <strong><em>IHMSSI</em></strong>, <strong><em>LED</em></strong> et <strong><em>BP</em></strong>				développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...) maintained by <a href="https://github.com/WebGE">WebGE</a></p>
 			<p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
 		</footer>
 	</div>
