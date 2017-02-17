@@ -1,13 +1,23 @@
 # IHMSSI
-Tags: LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, C#, NETMF, Visual Studio.
 
-Target: Netduino, Netduino plus 2, Netduino 3.
+Source code of the IHMSSI <strong>NETMF class</strong> contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
 
-This library can be use to control a specific HMI with Netduino :
+This class is for a IHMSSI card : 
 - 1 LCD 2X16 I2C (PCF2119),
 - 8 leds connected to a PCF8574(A),
 - 8 buttons connected to a PCF8574(A)
- 
-Code written in C# with Visual Studio 2013. 
 
-NetduinoIHMSSI : Example test program.
+<strong>Tags</strong>: I²C Bus,  LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
+
+<strong>Target</strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
+
+<strong>IDE</strong> : Visual Studio Community.
+
+<strong>Language</strong> : C#.
+
+<strong>Framework</strong> : .NETMF 4.3
+
+<hr>
+See <a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> too get started.
+
+Maintened by <a href="mailto:philippemariano@gmail.com">Philippe Mariano</a>
