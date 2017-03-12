@@ -20,4 +20,4 @@ This class is for a IHMSSI card :
 <hr>
 See <a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> too get started.
 
-Maintened by <a href="mailto:philippemariano@gmail.com">Philippe Mariano</a>
+Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
