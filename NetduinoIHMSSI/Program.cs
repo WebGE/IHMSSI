@@ -5,8 +5,7 @@ using Microsoft.SPOT.Hardware;
 using SecretLabs.NETMF.Hardware;
 using SecretLabs.NETMF.Hardware.NetduinoPlus;
 
-using Microtoolskit.Hardware.IHM;
-using Microtoolskit.Hardware.Displays;
+using ToolBoxes;
 
 namespace NetduinoIHMSSI
 {
@@ -15,9 +14,9 @@ namespace NetduinoIHMSSI
         public static void Main()
         {
             // Construction d'un objet IHM
-            // IHMSSI Ihm = new IHMSSI();
+           // IHMSSI Ihm = new IHMSSI();
             //IHMSSI Ihm = new IHMSSI(new PCF8574(0x39,200), new I2CLcd(I2CLcd.LcdManufacturer.BATRON,100));
-            IHMSSI Ihm = new IHMSSI(new I2CLcd(I2CLcd.LcdManufacturer.MIDAS));
+            IHMSSI Ihm = new IHMSSI(new I2CLcd(I2CLcd.LcdManufacturer.BATRON));
             Ihm.Lcd.PutString(0, 0, "Classe IHMSSI");
             Ihm.Lcd.PutString(0, 1, "Test des Leds");
 

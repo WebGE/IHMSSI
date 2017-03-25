@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Interface Homme Machine sur le bus I2C : Programme de test en C# et description des classes IHMSSI, LED et BP destinées à une Netduino plus 2 ou Netduino 3">
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<title>IHMSSI</title>
+</head>
+
+<body>
+
+	<!-- HEADER -->
+	<div id="header_wrap" class="outer">
+		<header class="inner">
+			<a id="forkme_banner" href="https://github.com/WebGE/IHMSSI">View on GitHub</a>
+
+			<h1 id="project_title">Interface Homme Machine à bus I²C</h1>
+			<h2 id="project_tagline">Description des classes <strong><em>IHMSSI</em></strong>, <strong><em>LED</em></strong> et <strong><em>BP</em></strong>				développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...)</h2>
+
+			<section id="downloads">
+				<a class="zip_download_link" href="https://github.com/WebGE/IHMSSI/zipball/master">Download this project as a .zip file</a>
+				<a class="tar_download_link" href="https://github.com/WebGE/IHMSSI/tarball/master">Download this project as a tar.gz file</a>
+			</section>
+		</header>
+	</div>
+
+	<!-- MAIN CONTENT -->
+	<div id="main_content_wrap" class="outer">
+		<section id="main_content" class="inner">
+			<hr>
+			<h4>Sommaire</h4>
+			<ol>
+				<li>LE MATERIEL
+					<ol>
+						<li>L'IHM SSI</li>
+						<li><a href="#DUINO">Les cartes Netduino</a></li>
+						<li><a href="#FEZ">Les cartes FEZ</a> </li>
+					</ol>
+				</li>
+				<li><a href="#LOG">LE LOGICIEL</a>
+					<ol>
+						<li><a href="#REP">Contenu du répertoire proposé au téléchargement</a></li>
+						<li><a href="#NUGET">Le NuGet MicroToolsKit</a></li>
+						<li><a href="#WIKI">Les Wikis</a></li>
+						<li><a href="#DESC">Description et utilisation de la classe PCF8574</a></li>
+					</ol>
+				</li>
+			</ol>
+			<hr>
+			<h3>1. LE MATERIEL</h3>
+			<hr>
+			<h4>1.1 L'IHM SSI</h4>
+			<hr>
+			<p>L'<strong>I</strong>nterface <strong>H</strong>omme <strong>M</strong>achine <strong>SSI</strong> se compose :</p>
+			<ul>
+				<li>d'un afficheur I²C 2x16 (MIDAS ou BATRON) à circuit <a href="https://webge.github.io/LCDI2C/" target="_blank">PCF2119</a>,</li>
+				<li>de huit leds et de huit boutons-poussoir connectés à deux circuits <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a>.</li>
+			</ul>
+			<p align="center"><img src="images/IHMSISI.jpg" width="50%" height="50%"></p>
+			<hr>
+
+			<h4 id="DUINO">1.2 Les cartes Netduino</h4>
+			<h5>Secret Labs</h5>
+			<hr>
+			<ul>
+				<li><strong>Microcontrôleur</strong> : STM32F405RG 32 bits à architecture Cortex-M4 cadencé à 168 MHz.</li>
+				<li><strong>RAM</strong> : 164KB+.</li>
+				<li><strong>Flash</strong> : 1408KB.</li>
+				<li><strong>Port Ethernet : </strong> 10/100Mbps (Wifi:802.11b/g/n)*.</li>
+				<li><strong>E/S numériques</strong> : 22</li>
+				<li><strong>Entrées analogiques</strong> : 6</li>
+				<li><strong>Stockage</strong>: carte µSD</li>
+				<li><strong>IDE</strong> : Microsoft Visual Studio</li>
+				<li><strong>Framework</strong> : .NETMF 4.3</li>
+				<li><strong>Langages de programmation</strong> : C#, VB</li>
+				<li><strong>Compatibilité</strong> : shield Arduino, Gadgeteer</li>
+			</ul>
+			<table>
+				<tr>
+					<td><img src="images/netduino3ethernet.png" alt="Netduino plus 2" target="_blank" /></td>
+					<td><img src="images/inputandoutput.png" alt="Netduino 3 wifi" target="_blank"
+						/></td>
+				</tr>
+				<tr>
+					<td align="center"><strong>Netduino 3 Ethernet</strong></td>
+					<td align="center"><strong>Netduino 3 wifi*</strong></td>
+				</tr>
+			</table>
+			<ul>
+				<li><strong>Sites à consulter</strong> : <a href="http://netduino.com/netduinoplus2/specs.htm" target="_blank">Netduino</a>,
+					<a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+				<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr/Search/Refine.aspx?Keyword=netduino" target="_blank">Mouser Electronics</a></li>
+			</ul>
+			<hr>
+
+			<h4 id="FEZ">1.3 Les cartes FEZ</h4>
+			<h5>GHI Electonics (Extrait)</h5>
+			<hr>
+			<ul>
+				<li><strong>Microcontrôleur</strong> : 180 MHz 32-bit ARM Cortex-M4.(120 MHz 32-bit ARM Cortex-M3 )*</li>
+				<li><strong>SoC(SoM)*</strong> : <a href="https://www.ghielectronics.com/catalog/product/501" target="_blank">G80</a>
+					<a href="https://www.ghielectronics.com/catalog/product/373" target="_blank">G120*</a>
+				</li>
+				<li><strong>RAM</strong> : 156 KB(2.87 MB)*.</li>
+				<li><strong>Flash</strong> : 256 KB (13.67 MB)*.</li>
+				<li><strong>E/S numériques</strong> : 53(60)*</li>
+				<li><strong>Entrées analogiques</strong> : 16(8)*</li>
+				<li><strong>Réseaux : </strong> Ethernet TCP/IP, WiFi, and SSL.</li>
+				<li><strong>Stockage</strong>: carte µSD</li>
+				<li><strong>IDE</strong> : Microsoft Visual Studio</li>
+				<li><strong>Framework</strong> : .NETMF 4.3</li>
+				<li><strong>Langages de programmation</strong> : C#, VB</li>
+			</ul>
+			<table>
+				<tr>
+					<td><img src="images/panda3.png" alt="PANDA III" /></td>
+					<td><img src="images/cobra3.png" alt="COBRA III" /></td>
+				</tr>
+				<tr>
+					<td align="center"><strong>PANDA III</strong></td>
+					<td align="center"><strong>COBRA III* (compatible Gadgeteer)</strong></td>
+				</tr>
+			</table>
+			<ul>
+				<li><strong>Sites à consulter</strong> : <a href="https://www.ghielectronics.com/" target="_blank">GHI ELECTRONICS</a>,
+					<a href="http://www.netmf.com/" target="_blank">NETMF</a></li>
+				<li><strong>Distributeurs</strong> : <a href="http://www.mouser.fr" target="_blank">Mouser Electronics</a></li>
+			</ul>
+
+			<hr>
+			<h3 id="LOG">2. LE LOGICIEL</h3>
+			<hr>
+
+			<h4 id="REP">2.1 Contenu du répertoire proposé au téléchargement</h4>
+			<p>Le répertoire proposé au téléchargement (au format zip ou tar.gz) contient la solution <strong>IHMSSI</strong> composée
+				: </p>
+			<ul>
+				<li>Du projet <strong>IHMSSI </strong> : le <strong>code source</strong> de la classe <em>IHMSSI</em>.</li>
+				<li>Du projet <strong>NetduinoIHMSSI </strong>: un exemple d'utilisation de cette classe.</li>
+			</ul>
+			<hr>
+
+			<h4 id="NUGET">2.2 Le NuGet MicroToolsKit</h4>
+			<p>La dernière version <strong>compilée</strong> de la classe <strong>IHMSSI</strong> se situe dans la bibliothèque <strong>MicroToolsKit</strong> disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>.</p>
+			<p align="center"><img src="images/NuGet-large.png" /></p>
+			<p><strong>Organisation des classes</strong>  contenues dans MicroToolsKit <a href="https://csharpembarquenetduino.wikispaces.com/6.+La+biblioth%C3%A8que+MicroToolsKit" target="_blank">[lien]</a></p>
+			<p><em>Installer cette bibliothèque dans le projet simplifie l'utilisation de cette classe.</em></p>
+			<hr>
+
+			<h4 id="WIKI">2.3 Les Wikis</h4>
+			<ul>
+				<li><strong>Fascicules</strong> d'exemples de code pour les cartes <strong>Netduino</strong>. <a href="https://csharpembarquenetduino.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp" target="_blank">[lien]</a></li>
+				<li><strong>Fascicule</strong> d'exemples de code pour les cartes <strong>FEZ</strong>. <a href="https://csharpembarquefez.wikispaces.com/5.+Les+fascicules+d%27exemples+cod%C3%A9s+en+CSharp" target="_blank">[lien]</a></li>
+			</ul>
+			<hr>
+
+			<h4 id="DESC">2.4 Description et utilisation de la classe IHMSSI</h4>
+			<ul>
+				<li><strong>Rôle: </strong>Contrôle les leds, les boutons-poussoir et l'afficheur de la carte SSI via un bus I²C.</li>
+				<li><strong>Assembly: </strong> <em>MicroToolsKit</em> (disponible sur
+					<a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>)</li>
+				<li><strong>Espace de noms: </strong><em>Microtoolskit.Hardware.IHM</em></li>
+			</ul>
+			<hr/>
+			<p><strong>Création d'un projet avec l'IDE Visual Studio</strong></p>
+			<ol>
+				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
+					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
+				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.IHM</strong> dans l'en-tête du fichier source.</li>
+				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>IHMSSI</em>.</li>
+				<li><strong>Utiliser</strong> les propriétés associées aux LED et aux BP de l'IHM pour accéder individuellement aux méthodes
+					des objets. <strong>Utiliser</strong> les méthodes de la classe IHMSSI pour les gérer collectivement.</li>
+			</ol>
+			<hr/>
+			<p><strong>Constructeurs</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>IHMSSI</strong>()</td>
+					<td>Instancie un objet "IHMSSI" composé :
+						<ul>
+							<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
+							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
+								,
+							</li>
+							<li>d'un afficheur lcd Midas (@=03A).</li>
+						</ul>
+						<p>Fréquence du bus: 100kHz pour les trois circuits.</p>
+						<p>Remarque: Le constructeur initialise le lcd et éteint les leds.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>IHMSSI</strong>(<strong>I2CLcd</strong> <em>lcd</em>)</td>
+					<td>Instancie un objet "IHMSSI" composé :
+						<ul>
+							<li>de huit leds (identifiées D0 à D7 sur la carte) reliées à un PCF8574A (@ = 0x38) ,</li>
+							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
+								,
+							</li>
+							<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
+						</ul>
+						<p>Paramètre:</p>
+						<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLcd</a></p>
+						<p>Remarque: Le constructeur initialise le lcd et éteint les leds.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>I2CLcd</strong> <em>lcd</em>)</td>
+					<td>Instancie un objet "IHMSSI" composé :
+						<ul>
+							<li>de huit leds (identifiées D0 à D7 sur la carte) pouvant être reliées à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574
+								(@ dans [0x20, 0x27]) ,</li>
+							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) reliés à un PCF8574A (@ = 0x3f)
+								,
+							</li>
+							<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
+						</ul>
+						<p>Paramètres:</p>
+						<p><em>leds</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
+						<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLcd</a></p>
+						<p>Remarque: Le constructeur initialise le lcd et éteint les leds.</p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>IHMSSI</strong>(<strong>PCF8574</strong> <em>leds</em>, <strong>PCF8574</strong> <em>BPs</em>, <strong>I2CLcd</strong>						<em>lcd</em>)</td>
+					<td>Instancie un objet "IHMSSI" composé :
+						<ul>
+							<li>de huit leds (identifiées D0 à D7 sur la carte) pouvant être reliées à un PCF8574A (@ dans [0x38, 0x3F]) ou à un PCF8574
+								(@ dans [0x20, 0x27]) ,</li>
+							<li>de huit boutons-poussoir (identifiés Echap, Enter, Ok, Set, -, v, ^, + sur la carte) pouvant être reliés à un PCF8574A
+								(@ dans [0x38, 0x3F]) ou à un PCF8574 (@ dans [0x20, 0x27]) ,</li>
+							<li>d'un afficheur lcd Midas (@=03A) ou BATRON (@=0x3B)</li>
+						</ul>
+						<p>Paramètres:</p>
+						<p><em>leds</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
+						<p><em>BPs</em>: objet <a href="https://webge.github.io/PCF8574/" target="_blank">PCF8574</a></p>
+						<p><em>lcd</em>: objet <a href="https://webge.github.io/LCDI2C/" target="_blank">I2CLcd</a></p>
+						<p>Remarque: Le constructeur initialise le lcd et éteint les leds.</p>
+					</td>
+				</tr>
+			</table>
+
+			<p><strong>Propriétés</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpEchap</strong></td>
+					<td>
+						Le bouton-poussoir <strong>Echap</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.
+						<p>Exemple:</p>
+						<p><em>if (Ihm.BpEchap.Read() == true)<br>
+	                    ...<br>
+	                else<br>
+	                   ...
+		</em></p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpEnter</strong></td>
+					<td>Le bouton-poussoir <strong>Enter</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpOk</strong></td>
+					<td>Le bouton-poussoir <strong>Ok</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpSet</strong></td>
+					<td>Le bouton-poussoir <strong>Set</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpMoins</strong></td>
+					<td>Le bouton-poussoir <strong>-</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpPlus</strong></td>
+					<td>Le bouton-poussoir <strong>+</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpFleBas</strong></td>
+					<td>Le bouton-poussoir <strong>v</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>BpFleHaut</strong></td>
+					<td>Le bouton-poussoir <strong>^</strong> accède aux méthodes de la classe <a href="#ClasseBP">BP</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D0</strong></td>
+					<td>
+						La led <strong>D0</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.
+						<p>Exemple:</p>
+						<p><em>if (Ihm.BpPlus.Read() == true)<br>
+	                    Ihm.D0.Write(true);<br>
+	                else<br>
+	                    Ihm.D0.Write(false);
+		</em></p>
+					</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D1</strong></td>
+					<td>La led <strong>D1</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D2</strong></td>
+					<td>La led <strong>D2</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D3</strong></td>
+					<td>La led <strong>D3</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D4</strong></td>
+					<td>la led <strong>D4</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D5</strong></td>
+					<td>La led <strong>D5</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D6</strong></td>
+					<td>La led <strong>D6</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>D7</strong></td>
+					<td>La led <strong>D7</strong> accède aux méthodes de la classe <a href="#ClasseLed">Led</a>.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Property_20x.png"></td>
+					<td><strong>Lcd</strong></td>
+					<td>
+						L'afficheur <strong>Lcd</strong> accède aux méthodes de la classe
+						<a href="https://webge.github.io/LCDI2C/" target="_blank">LCDI2C</a>.
+						<p>Exemple:</p>
+						<p><em>Ihm.Lcd.PutString(0, 0, "Classe IHMSSI");</em></p>
+					</td>
+				</tr>
+			</table>
+
+			<p><strong>Méthodes</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td>
+						<strong>void BPsRead</strong>(<strong>out bool</strong> <em>BPEchap</em>, <br><strong>out bool</strong> <em>BPEnter</em>,
+						<strong>out bool</strong> <em>BPOk</em>,<br> <strong>out bool</strong> <em>BPSet</em>, <strong>out bool</strong> <em>BPMoins</em>,
+						<strong>out bool</strong> <em>BPFleBas</em>, <strong>out bool</strong> <em>BPFleHaut</em>,<strong>out bool</strong>						<em>BPPlus</em>)</td>
+					<td>Renvoie l'état des huit boutons-poussoir. <strong>Vrai</strong> si appuyé, <strong>faux</strong> si relâché.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void LedsOff</strong>()</td>
+					<td>Eteint les leds D7 à D0.</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void LedsOn</strong>()</td>
+					<td>Eclaire les leds D7 à D0</td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void LedsWrite</strong>(<strong>byte</strong> <em>value</em>)</td>
+					<td>Ecrit l'octet <em>value</em> sur les led D7 à D0. "0" => led éteinte, "1" => led éclairée</td>
+				</tr>
+			</table>
+			<hr/>
+			<a id="ClasseBP"></a>
+			<h4>Classe BP</h4>
+			<hr/>
+			<p><strong>Méthodes</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>bool Read</strong>()</td>
+					<td>Renvoie l'état logique du bouton-poussoir. <br><strong>Vrai</strong> si actionné. <strong>Faux</strong> si relâché</td>
+				</tr>
+			</table>
+
+			<hr/>
+			<a id="ClasseLed"></a>
+			<h4>Classe Led</h4>
+			<hr/>
+			<p><strong>Méthodes</strong></p>
+			<table>
+				<tr>
+					<td></td>
+					<td><strong>Syntaxe</strong></td>
+					<td><strong>Description</strong></td>
+				</tr>
+				<tr>
+					<td><img src="images/Method_16x.png"></td>
+					<td><strong>void Write</strong>(<strong>bool</strong> <em>state</em>)</td>
+					<td>Eclaire ou éteint la led .<br> <strong>Vrai</strong> => led éclairée. <strong>Faux</strong> => led éteinte</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+
+	<!-- FOOTER  -->
+	<div id="footer_wrap" class="outer">
+		<footer class="inner">
+			<p class="copyright">Description des classes <strong><em>IHMSSI</em></strong>, <strong><em>LED</em></strong> et <strong><em>BP</em></strong>				développée en C# sous .NETMF 4.3 pour les cartes Netduino et FEZ (PANDA, COBRA...) maintained by <a href="https://github.com/WebGE">WebGE</a></p>
+			<p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+		</footer>
+	</div>
+
+
+
+</body>
+
+</html>
