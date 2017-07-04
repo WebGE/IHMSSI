@@ -182,7 +182,7 @@
 					<a href="https://csharpembarquenetduino.wikispaces.com/6.+MicroToolsKit+library" target="_blank">ici</a>.</li>
 				<li><strong>Utiliser</strong> le gestionnaire de paquets NuGet pour <strong>ajouter</strong> l'assembly <strong>MicroToolsKit</strong>					(disponible sur <a href="https://www.nuget.org/packages/WebGE.MicroToolsKit/" target="_blank">nuget.org</a>) dans le
 					répertoire <em>Références</em> du projet.(clic droit sur <em>Références</em> puis <em>Gérer les packages NuGet...</em>)</li>
-				<li><strong>Ajouter</strong> l'espace de noms <strong>Microtoolskit.Hardware.IHM</strong> dans l'en-tête du fichier source.</li>
+				<li><strong>Ajouter</strong> les espaces de noms <strong>Microtoolskit.Hardware.IHM</strong> et <strong>Microtoolskit.Hardware.Displays<strong> dans l'en-tête du fichier source.</li>
 				<li><strong>Créer</strong> un objet en utilisant un des constructeurs <em>IHMSSI</em>.</li>
 				<li><strong>Utiliser</strong> les propriétés associées aux LED et aux BP de l'IHM pour accéder individuellement aux méthodes
 					des objets. <strong>Utiliser</strong> les méthodes de la classe IHMSSI pour les gérer collectivement.</li>
@@ -190,10 +190,10 @@
 			<hr/>
 			<strong>Exemple</strong><br>
 			<pre>
-using Microtoolskit.Hardware.Displays;
-
 using System.Threading;
-using testMicroToolsKit.Hardware.IHM;
+
+using Microtoolskit.Hardware.Displays;
+using MicroToolsKit.Hardware.IHM;
 
 namespace FezPanda
 {
