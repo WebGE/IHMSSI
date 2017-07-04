@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHMSSI", "IHMSSI.csproj", "{562D613D-A0C3-458E-A7E0-F8D90505C85B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IHMSSI", "IHMSSI\IHMSSI.csproj", "{428F75DC-9591-490F-AD49-8EB86333E484}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetduinoIHMSSI", "..\NetduinoIHMSSI\NetduinoIHMSSI.csproj", "{341FF528-6F01-4899-B9F2-2DAE0114640B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netduino", "Netduino\Netduino.csproj", "{49BD992F-5544-4B82-BF89-6391C4E4E531}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FezPanda", "FezPanda\FezPanda.csproj", "{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,16 +15,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{562D613D-A0C3-458E-A7E0-F8D90505C85B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{562D613D-A0C3-458E-A7E0-F8D90505C85B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{562D613D-A0C3-458E-A7E0-F8D90505C85B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{562D613D-A0C3-458E-A7E0-F8D90505C85B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{341FF528-6F01-4899-B9F2-2DAE0114640B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{428F75DC-9591-490F-AD49-8EB86333E484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{428F75DC-9591-490F-AD49-8EB86333E484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{428F75DC-9591-490F-AD49-8EB86333E484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{428F75DC-9591-490F-AD49-8EB86333E484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BD992F-5544-4B82-BF89-6391C4E4E531}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEEB7D4E-A19F-4364-9319-6E2B2AF3EC5A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
