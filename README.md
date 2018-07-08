@@ -20,4 +20,16 @@ This class is for a IHMSSI card :
 <hr>
 See <a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> too get started.
 
+<strong>Feed on Google+</strong>
+--------------------
+- <a href="https://plus.google.com/collection/oaaJX" target="_blank">C# embarqué et .NetMF v4.3 : Netduino et GHI FEZ</a> (in French).
+
+<strong>Wiki</strong>
+--------------------
+- <a href="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ</a> (in French).
+
+<strong>Project site</strong>
+--------------------
+- <a href ="http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">MicroToolsKit library</a> (in English).
+
 Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
