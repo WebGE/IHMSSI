@@ -7,6 +7,23 @@ This class is for a IHMSSI card :
 - 8 leds connected to a PCF8574(A),
 - 8 buttons connected to a PCF8574(A)
 
+This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
+
+ <img src="img/nuget.JPG" align="center" />
+
+<strong>Hardware</strong>
+---------------------
+<strong> Targets </strong>: Netduino, Netduino2 plus, Netduino 3, FEZ PANDA 3 and COBRA 3.
+
+<strong>Software</strong>
+---------------------
+<ul>
+<li><strong>Language</strong> : C#</li>
+<li><strong>Framework used</strong> : .NETMF 4.3</li>
+<li><strong>IDE</strong> : Visual Studio Community 2013 (2015)</li>
+<li><strong>xml</strong> : documentation inside class </li> 
+<li><strong>Exception</strong> : if transaction failed</li>
+</ul>
 <strong>Tags</strong>: I²C Bus,  LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
 <strong>Target</strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
