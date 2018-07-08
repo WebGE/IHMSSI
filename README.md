@@ -1,8 +1,10 @@
 # IHMSSI
 
-Source code of the IHMSSI <strong>NETMF class</strong> contained in the <a href="https://www.nuget.org/packages/WEBGE.Microtoolskit/" target="_blank">MicroToolsKit</a> <strong>library</strong>. Download at <a href="https://www.nuget.org" target="_blank">nuget.com</a>
+<strong>Description</strong>
+-------------------------------------
+Source code.
 
-This class is for a IHMSSI card : 
+A <strong>.NETMF v4.3 class</strong> write for IHMSSI board.
 - 1 LCD 2X16 I2C (PCF2119),
 - 8 leds connected to a PCF8574(A),
 - 8 buttons connected to a PCF8574(A)
