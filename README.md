@@ -29,12 +29,15 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 
 <strong> Visual Studio solution</strong>
 -------------------------------------
+To come up
 
 <strong>Assembly</strong>
 --------------------------
+To come up
 
 <strong>Video</strong>
 -------------------
+To come up
 
 <strong>Keywords</strong>
 ----------------------------
