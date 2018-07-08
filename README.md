@@ -26,18 +26,27 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 <li><strong>xml</strong> : documentation inside class </li> 
 <li><strong>Exception</strong> : if transaction failed</li>
 </ul>
-<strong>Tags</strong>: I²C Bus,  LCD 2x16,BATRON, MIDAS, I2C, PCF2119, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
-<strong>Target</strong>: Netduino, Netduino plus 2, Netduino 3, FEZ PANDA 3 et COBRA 3.
+<strong> Visual Studio solution</strong>
+-------------------------------------
 
-<strong>IDE</strong> : Visual Studio Community.
+<strong>Assembly</strong>
+--------------------------
 
-<strong>Language</strong> : C#.
+<strong>Video</strong>
+-------------------
 
-<strong>Framework</strong> : .NETMF 4.3
+<strong>Keywords</strong>
+----------------------------
+I²C Bus, Netduino, FEZ, PANDA, COBRA, C#, NETMF, Visual Studio.
 
-<hr>
-See <a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> too get started.
+<strong>Tested on</strong>
+-------------------
+Fez Panda III, Netduino2 plus
+
+<strong>To get started</strong>
+--------------------
+<a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> (in French).
 
 <strong>Feed on Google+</strong>
 --------------------
