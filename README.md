@@ -33,7 +33,8 @@ To come up
 
 <strong>Assembly</strong>
 --------------------------
-To come up
+
+ <img src="img/IHMSISI.jpg" align="center" />
 
 <strong>Video</strong>
 -------------------
