@@ -49,7 +49,7 @@ Fez Panda III, Netduino2 plus
 
 <strong>To get started</strong>
 --------------------
-<a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> (in French).
+- <a href="http://webge.github.io/IHMSSI/" target="_blank">IHMSSI GitHub Pages</a> (in French).
 
 <strong>Feed on Google+</strong>
 --------------------
