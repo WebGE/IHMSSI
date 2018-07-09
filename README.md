@@ -4,7 +4,7 @@
 -------------------------------------
 Source code.
 
-A <strong>.NETMF v4.3 class</strong> write for IHMSSI board.
+A <strong>.NETMF v4.3 class</strong> write for IHMSSI personal board.
 - 1 LCD 2X16 I2C (PCF2119),
 - 8 leds connected to a PCF8574(A),
 - 8 buttons connected to a PCF8574(A)
@@ -29,11 +29,19 @@ This class is also in the <a href="https://www.nuget.org/packages/WEBGE.Microtoo
 
 <strong> Visual Studio solution</strong>
 -------------------------------------
-To come up
+<ul>
+<li><strong>IHMSSI</strong>
+<ul>
+<li><strong>IHMSSI</strong> : .NetMF class</li>
+<img src="img/ihmssi.png" />
+<li><strong>Netduino</strong> : class test program (chenillard) for Netduino board</li>
+<li><strong>FezPanda</strong> : class test program (chenillard) for Fez Panda board</li>
+</ul>
+</li>
+</ul>
 
 <strong>Assembly</strong>
 --------------------------
-
  <img src="img/IHMSISI.jpg" align="center" />
 
 <strong>Video</strong>
