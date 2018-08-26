@@ -42,7 +42,7 @@ This class is also in the [MicroToolsKit](https://www.nuget.org/packages/WEBGE.M
 
 ## Video
 
-To see on [Youtuve](https://youtu.be/X9XlJdWWA5c)
+To see on [Youtube](https://youtu.be/X9XlJdWWA5c)
 
 ## Keywords
 
