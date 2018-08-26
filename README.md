@@ -42,7 +42,7 @@ This class is also in the [MicroToolsKit](https://www.nuget.org/packages/WEBGE.M
 
 ## Video
 
-To come up
+To see on [Youtuve](https://youtu.be/X9XlJdWWA5c)
 
 ## Keywords
 
@@ -60,16 +60,16 @@ any
 
  [IHMSSI GitHub Pages](http://webge.github.io/IHMSSI/) (French).
 
-Feed on Google+
+## Feed on Google+
 
- <a href="https://plus.google.com/collection/oaaJX" target="_blank">C# embarqué et .NetMF v4.3 : Netduino et GHI FEZ</a> (in French).
+* [C# embarqué et .NetMF v4.3 : Netduino et GHI FEZ](https://plus.google.com/collection/oaaJX) (French).
 
-Wiki
+## Wiki
 
- <a href="http://webge.dyndnsserver.com/dokuwiki/doku.php?id=netmf43:accueilnetmf" target="_blank">C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ</a> (in French).
+* [C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ](http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf) (French).
 
-Project site
+## Project site
 
- <a href ="http://webge.dyndnsserver.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit" target="_blank">MicroToolsKit library</a> (in English).
+* [MicroToolsKit library](http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:6_microtoolskit) (English)
 
-Maintened by <a href="mailto:philippemariano@gmail.com">WebGE</a>
+**Maintened by** [WebGe](mailto:philippemariano@gmail.com)
