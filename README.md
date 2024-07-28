@@ -4,7 +4,7 @@
 
 Source code.
 
-A **.NETMF v4.3** class write for IHMSSI personal board.
+A **.NETMF v4.4** class write for IHMSSI personal board.
  1 LCD 2X16 I2C (PCF2119),
  8 LED connected to a PCF8574(A),
  8 buttons connected to a PCF8574(A)
@@ -20,7 +20,7 @@ This class is also in the [MicroToolsKit](https://www.nuget.org/packages/WEBGE.M
 ## Software
 
 * **Language** : C#
-* **Framework used** : .NETMF 4.3
+* **Framework used** : .NETMF 4.4
 * **IDE** : Visual Studio Community 2015
 * **xml** : documentation inside class  
 * **Exception** : if transaction failed
@@ -60,13 +60,9 @@ any
 
  [IHMSSI GitHub Pages](http://webge.github.io/IHMSSI/) (French).
 
-## Feed on Google+
-
-* [C# embarqué et .NetMF v4.3 : Netduino et GHI FEZ](https://plus.google.com/collection/oaaJX) (French).
-
 ## Wiki
 
-* [C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ](http://webge.dyndns-server.com/dokuwiki/doku.php?id=netmf43:accueilnetmf) (French).
+* [C# embarqué et .NetMF v4.3 pour les cartes Netduino et GHI FEZ](https://webge.fr/dokuwiki/doku.php?id=archives:netmf43:accueilnetmf) (French).
 
 ## Project site
 
